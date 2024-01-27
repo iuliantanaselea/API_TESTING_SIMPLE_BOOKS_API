@@ -45,17 +45,12 @@ class TestBooksApi:
         books = response.json()
         assert len(books) <= 20, "Number of books should be max 20"
 
-    def test_set_limit_to_zero(self):
-        response = get_all_books(limit=0)
-        books= response.json()
-        assert len(books) == ?????
-
-
-    #test introducing type=comedy
+    # test introducing type=comedy
     def test_invalid_type_value(self):
         response = get_all_books(filter_type="comedy")
         assert response.status_code == 400
-        assert response.json()['error'] == "Invalid value for query parameter 'type'. Must be one of: fiction, non-fiction."
+        assert response.json()[
+                   'error'] == "Invalid value for query parameter 'type'. Must be one of: fiction, non-fiction."
 
     def test_negative_limit_value(self):
         response = get_all_books(limit=-1)

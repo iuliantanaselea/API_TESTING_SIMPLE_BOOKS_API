@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Running the tests
 
-The tests can be found in the _test_ fonder.
+The tests can be found in the _test_ folder.
 To run any test, you can run the corresponding file.
 
 ## Generating the report
